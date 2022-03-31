@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// This is view class
 namespace Students_Courses
 {
     public partial class Form1 : Form
@@ -52,7 +53,7 @@ namespace Students_Courses
 
         private void MiAbout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This application is created to take courses student has taken, save them in the dropdown, write and save them in the text file, and calculate their Cumulative GPA");
+            MessageBox.Show("This application is created to take courses student has taken, save them in the dropdown. It can also write, save and read courses to and from the text file and it also calculate grade points for each course.");
         }
 
         private void MiExit_Click(object sender, EventArgs e)
@@ -74,7 +75,7 @@ namespace Students_Courses
                 fname = dlgSave.FileName;
                 courseController.WriteCoursesToTextFile(fname);
             }
-            MessageBox.Show("File was written.");
+            MessageBox.Show("Text file with all the courses was written.");
         }
 
         private void MiOpen_Click(object sender, EventArgs e)
@@ -113,19 +114,28 @@ namespace Students_Courses
 
         private void btnAddCourse_Click(object sender, EventArgs e)
         {
+            // Extracting data the user entered from the appropriate fields, saving them in variables and calling controller class to create course object and add to the list
             string courseSemester = ddSemesters.Text;
             string courseName = txtCourseName.Text;
             string courseNumber = txtCourseNumber.Text;
             string instructorName = txtInstructorName.Text;
             string courseRequirement = ddRequirements.Text;
+            int courseCredits = Convert.ToInt32(txtCourseCredits.Text);
             string courseGrade = ddGrades.Text;
             string courseFeedback = txtCourseFeedback.Text;
 
-            courseController.AddCourse(courseSemester, courseName, courseNumber, instructorName, courseRequirement, courseGrade, courseFeedback);
-            //Course course = new Course(courseSemester, courseName, courseNumber, instructorName, courseRequirement, courseGrade, courseFeedback);
+            courseController.AddCourse(courseSemester, courseName, courseNumber, instructorName, courseRequirement, courseCredits, courseGrade, courseFeedback);
             LoadCoursesDropdown();
             ChooseCourseFromDropdown(courseName);
-            MessageBox.Show(courseController.GetCoursesAsString());
+            MessageBox.Show("All the courses you added: \n" + "\n" + courseController.GetCoursesAsString());
+            ddSemesters.Text = "";
+            txtCourseName.Text = "";
+            txtCourseNumber.Text = "";
+            txtInstructorName.Text = "";
+            ddRequirements.Text = "";
+            txtCourseCredits.Text = "";
+            ddGrades.Text = "";
+            txtCourseFeedback.Text = "";
         }
 
         private void LoadCoursesDropdown()
@@ -169,6 +179,7 @@ namespace Students_Courses
                     txtCourseNumber.Text = data["courseNumber"];
                     txtInstructorName.Text = data["instructorName"];
                     ddRequirements.Text = data["courseRequirement"];
+                    txtCourseCredits.Text = data["courseCredits"];
                     ddGrades.Text = data["courseGrade"];
                     txtCourseFeedback.Text = data["courseFeedback"];
                     Refresh(); // refreshes the form so that all the controls update to reflect new settings.

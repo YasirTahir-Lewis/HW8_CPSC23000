@@ -21,9 +21,9 @@ namespace Students_Courses
             this.courses = courses;
         }
 
-        public void AddCourse(string courseSemester, string courseName, string courseNumber, string instructorName, string courseRequirement, string courseGrade, string courseFeedback)
+        public void AddCourse(string courseSemester, string courseName, string courseNumber, string instructorName, string courseRequirement, int courseCredits, string courseGrade, string courseFeedback)
         {
-            Course course = new Course(courseSemester, courseName, courseNumber, instructorName, courseRequirement, courseGrade, courseFeedback);
+            Course course = new Course(courseSemester, courseName, courseNumber, instructorName, courseRequirement, courseCredits, courseGrade, courseFeedback);
             courses.Add(course);
         }
 
@@ -59,6 +59,7 @@ namespace Students_Courses
                     result.Add("courseNumber", course.CourseNumber);
                     result.Add("instructorName", course.InstructorName);
                     result.Add("courseRequirement", course.CourseRequirement);
+                    result.Add("courseCredits", (course.CourseCredits).ToString());
                     result.Add("courseGrade", course.CourseGrade);
                     result.Add("courseFeedback", course.CourseFeedback);
                     return result;
@@ -77,5 +78,6 @@ namespace Students_Courses
                 }
             }
         }
+
     }
 }

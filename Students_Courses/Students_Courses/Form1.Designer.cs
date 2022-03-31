@@ -49,6 +49,8 @@ namespace Students_Courses
             this.ddCourses = new System.Windows.Forms.ComboBox();
             this.lblCourses = new System.Windows.Forms.Label();
             this.btnAddCourse = new System.Windows.Forms.Button();
+            this.lblCourseCredits = new System.Windows.Forms.Label();
+            this.txtCourseCredits = new System.Windows.Forms.TextBox();
             this.gblCourseInfo.SuspendLayout();
             this.gblUserInfo.SuspendLayout();
             this.SuspendLayout();
@@ -183,6 +185,8 @@ namespace Students_Courses
             // 
             // gblUserInfo
             // 
+            this.gblUserInfo.Controls.Add(this.txtCourseCredits);
+            this.gblUserInfo.Controls.Add(this.lblCourseCredits);
             this.gblUserInfo.Controls.Add(this.ddGrades);
             this.gblUserInfo.Controls.Add(this.txtCourseFeedback);
             this.gblUserInfo.Controls.Add(this.lblUserFeedback);
@@ -199,10 +203,16 @@ namespace Students_Courses
             this.ddGrades.FormattingEnabled = true;
             this.ddGrades.Items.AddRange(new object[] {
             "A",
+            "A-",
+            "B+",
             "B",
+            "B-",
+            "C+",
             "C",
+            "C-",
+            "D+",
             "D"});
-            this.ddGrades.Location = new System.Drawing.Point(122, 37);
+            this.ddGrades.Location = new System.Drawing.Point(125, 59);
             this.ddGrades.Name = "ddGrades";
             this.ddGrades.Size = new System.Drawing.Size(121, 21);
             this.ddGrades.TabIndex = 4;
@@ -228,7 +238,7 @@ namespace Students_Courses
             // lblCourseGrade
             // 
             this.lblCourseGrade.AutoSize = true;
-            this.lblCourseGrade.Location = new System.Drawing.Point(25, 40);
+            this.lblCourseGrade.Location = new System.Drawing.Point(23, 62);
             this.lblCourseGrade.Name = "lblCourseGrade";
             this.lblCourseGrade.Size = new System.Drawing.Size(75, 13);
             this.lblCourseGrade.TabIndex = 0;
@@ -261,6 +271,22 @@ namespace Students_Courses
             this.btnAddCourse.Text = "Add Course";
             this.btnAddCourse.UseVisualStyleBackColor = true;
             this.btnAddCourse.Click += new System.EventHandler(this.btnAddCourse_Click);
+            // 
+            // lblCourseCredits
+            // 
+            this.lblCourseCredits.AutoSize = true;
+            this.lblCourseCredits.Location = new System.Drawing.Point(24, 27);
+            this.lblCourseCredits.Name = "lblCourseCredits";
+            this.lblCourseCredits.Size = new System.Drawing.Size(75, 13);
+            this.lblCourseCredits.TabIndex = 5;
+            this.lblCourseCredits.Text = "Course Credits";
+            // 
+            // txtCourseCredits
+            // 
+            this.txtCourseCredits.Location = new System.Drawing.Point(125, 24);
+            this.txtCourseCredits.Name = "txtCourseCredits";
+            this.txtCourseCredits.Size = new System.Drawing.Size(121, 20);
+            this.txtCourseCredits.TabIndex = 6;
             // 
             // Form1
             // 
@@ -306,6 +332,8 @@ namespace Students_Courses
         private System.Windows.Forms.ComboBox ddCourses;
         private System.Windows.Forms.Label lblCourses;
         private System.Windows.Forms.Button btnAddCourse;
+        private System.Windows.Forms.TextBox txtCourseCredits;
+        private System.Windows.Forms.Label lblCourseCredits;
     }
 }
 
