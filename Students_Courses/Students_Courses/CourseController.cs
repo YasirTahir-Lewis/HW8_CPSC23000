@@ -79,5 +79,15 @@ namespace Students_Courses
             }
         }
 
+        public string ReadCoursesFromTextFile(string fname)
+        {
+            String text;
+            using (StreamReader reader = new StreamReader(fname))
+            {
+                text = reader.ReadToEnd();
+            }
+            return text;
+        }
+
     }
 }

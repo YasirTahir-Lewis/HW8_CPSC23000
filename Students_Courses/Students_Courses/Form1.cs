@@ -89,11 +89,8 @@ namespace Students_Courses
             if (dlgOpen.ShowDialog() == DialogResult.OK)
             {
                 fname = dlgOpen.FileName;
-                using (StreamReader reader = new StreamReader(fname))
-                {
-                    String text = reader.ReadToEnd();
-                    MessageBox.Show(text);
-                }
+                string text = courseController.ReadCoursesFromTextFile(fname);
+                MessageBox.Show(text);
             }
         }
 
