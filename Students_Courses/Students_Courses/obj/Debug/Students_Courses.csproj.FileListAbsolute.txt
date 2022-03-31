@@ -1,0 +1,10 @@
+C:\Users\yasir\Spring 2022\.NET Programming\week11\Students_Courses\Students_Courses\obj\Debug\Students_Courses.csprojAssemblyReference.cache
+C:\Users\yasir\Spring 2022\.NET Programming\week11\Students_Courses\Students_Courses\obj\Debug\Students_Courses.Form1.resources
+C:\Users\yasir\Spring 2022\.NET Programming\week11\Students_Courses\Students_Courses\obj\Debug\Students_Courses.Properties.Resources.resources
+C:\Users\yasir\Spring 2022\.NET Programming\week11\Students_Courses\Students_Courses\obj\Debug\Students_Courses.csproj.GenerateResource.cache
+C:\Users\yasir\Spring 2022\.NET Programming\week11\Students_Courses\Students_Courses\obj\Debug\Students_Courses.csproj.CoreCompileInputs.cache
+C:\Users\yasir\Spring 2022\.NET Programming\week11\Students_Courses\Students_Courses\bin\Debug\Students_Courses.exe.config
+C:\Users\yasir\Spring 2022\.NET Programming\week11\Students_Courses\Students_Courses\bin\Debug\Students_Courses.exe
+C:\Users\yasir\Spring 2022\.NET Programming\week11\Students_Courses\Students_Courses\bin\Debug\Students_Courses.pdb
+C:\Users\yasir\Spring 2022\.NET Programming\week11\Students_Courses\Students_Courses\obj\Debug\Students_Courses.exe
+C:\Users\yasir\Spring 2022\.NET Programming\week11\Students_Courses\Students_Courses\obj\Debug\Students_Courses.pdb
